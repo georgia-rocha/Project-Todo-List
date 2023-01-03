@@ -8,7 +8,6 @@ class Form extends React.Component {
 
     componentDidMount() {
         const listLS = JSON.parse(localStorage.getItem('ListSaved'));
-        console.log(listLS);
         if (listLS !== null) {
             this.setState({
                 savedList: listLS,
@@ -41,6 +40,19 @@ class Form extends React.Component {
         })
     };
 
+    onClickLi = ({ target }) => {
+        const itemSelecionado = document.getElementsByClassName("item-selecionado")[0];
+        if (target.className === "item") {
+            if (itemSelecionado) {
+                itemSelecionado.className = "item"
+            }
+            target.className = "item-selecionado";
+        } else if (target.className === "item-selecionado") {
+            target.className = "item"
+            console.log("aa");
+        };
+    };
+
     render() {
         const { inputTarefa, savedList } = this.state;
         return (
@@ -51,8 +63,8 @@ class Form extends React.Component {
                 <button type="button" id="criar-tarefa" onClick={this.handleClick}>criar tarefa</button>
                 <ol id="lista-tarefas">
                     {savedList.length > 0 && savedList.map((list) => (
-                        <li key={list}>
-                      {list}
+                        <li key={list} className="item" onClick={this.onClickLi}>
+                            {list}
                         </li>
                     ))}
                 </ol>
