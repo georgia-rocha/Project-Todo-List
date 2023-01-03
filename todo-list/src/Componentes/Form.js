@@ -53,6 +53,14 @@ class Form extends React.Component {
         };
     };
 
+    dubleClick = ({ target }) => {
+        if (target.className === "item" || target.className === "item-selecionado") {
+            target.className = "completed"
+        } else {
+            target.className = "item"
+        }
+    };
+
     render() {
         const { inputTarefa, savedList } = this.state;
         return (
@@ -60,10 +68,10 @@ class Form extends React.Component {
                 <header>Minha Lista de Tarefas</header>
                 <p id="funcionamento">Clique duas vezes em um item para marcá-lo como completo</p>
                 <input id="texto-tarefa" value={inputTarefa} type="text" name="inputTarefa" onChange={this.handleChange} />
-                <button type="button" id="criar-tarefa" onClick={this.handleClick}>criar tarefa</button>
+                <button type="button" id="criar-tarefa" onClick={this.handleClick}>Adicionar Tarefa</button>
                 <ol id="lista-tarefas">
                     {savedList.length > 0 && savedList.map((list) => (
-                        <li key={list} className="item" onClick={this.onClickLi}>
+                        <li key={list} className="item" onClick={this.onClickLi} onDoubleClick={this.dubleClick}>
                             {list}
                         </li>
                     ))}
