@@ -55,10 +55,29 @@ class Form extends React.Component {
 
     dubleClick = ({ target }) => {
         if (target.className === "item" || target.className === "item-selecionado") {
-            target.className = "completed"
+            target.className = "item completed"
         } else {
             target.className = "item"
         }
+    };
+
+    removeList = () => {
+        const { savedList } = this.state;
+        this.setState({
+            savedList: '',
+        }, this.saveLocalStorage);
+    };
+
+    removeItensFinist = () => {
+        const { savedList } = this.state;
+        const itens = document.querySelectorAll(".item");
+        console.log(itens);
+        const verifyItens = [...itens].filter((item) => item.className !== "item completed");
+        const filterItens = verifyItens.map((item) => item.innerText)
+        console.log(filterItens);
+        this.setState({
+            savedList: filterItens,
+        }, this.saveLocalStorage);
     };
 
     render() {
@@ -76,6 +95,8 @@ class Form extends React.Component {
                         </li>
                     ))}
                 </ol>
+                <button type="button" id="apaga-tudo" onClick={this.removeList}>Apagar Lista</button>
+                <button type="button" id="remover-finalizados" onClick={this.removeItensFinist}> Apagar Finalizados</button>
             </>
         );
     }
