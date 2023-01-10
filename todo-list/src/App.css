@@ -1,41 +1,80 @@
-*{text-align: center;
+* {
+  text-align: center;
   padding: 0;
   border: 0;
-
 }
-body{
 
+body {
   background-color: rgb(2, 43, 2);
   width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
   background-color: antiquewhite;
   border-radius: 25px;
-  display:inline-block;
   width: 70vw;
   height: 60vh;
   align-items: center;
-  
 }
 
 header {
   font-size: 2rem;
+  padding: 5px;
 }
 
 #funcionamento {
   font-size: 1;
 }
 
-.item-selecionado{
+.item-selecionado {
   background-color: gray
 }
 
 .completed {
-  text-decoration: line-through solid black;
+  text-decoration: line-through solid rgb(250, 1, 1);
 }
 
-#buttons{
-display:inline-block;
-align-items: center;
+#texto-tarefa {
+  font-size: 0.9rem;
+  padding: 5px;
+  border: 1px solid rgb(2, 43, 2);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#lista-tarefas {
+  width: 100rw;
+  flex-grow: 1;
+}
+
+#buttons {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 16%;
+}
+
+button {
+  margin: 5px;
+  font-size: 0.9rem;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgb(2, 43, 2);
+  color: white;
+}
+
+#list-formato {
+  display: flex;
+  width: 80%;
+  margin-left: 4.5rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 4%;
 }
