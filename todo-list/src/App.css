@@ -1,24 +1,25 @@
 * {
-  text-align: center;
-  padding: 0;
   border: 0;
+  padding: 0;
+  text-align: center;
 }
 
 body {
+  align-items: center;
   background-color: rgb(2, 43, 2);
-  width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  height: 100vh;
+  width: 100vw;
 }
 
-main {
+#list-form {
+  align-items: center;
   background-color: antiquewhite;
   border-radius: 25px;
-  width: 70vw;
   height: 60vh;
-  align-items: center;
+  margin-top: 8%;
+  width: 70vw;
 }
 
 header {
@@ -39,42 +40,41 @@ header {
 }
 
 #texto-tarefa {
-  font-size: 0.9rem;
-  padding: 5px;
   border: 1px solid rgb(2, 43, 2);
   border-radius: 10px;
   cursor: pointer;
+  font-size: 0.9rem;
+  padding: 5px;
 }
 
 #lista-tarefas {
-  width: 100rw;
-  flex-grow: 1;
+  display:inline-block;
+  justify-content: center;
+  width: 80%;
 }
 
 #buttons {
-  display: flex;
-  justify-content: center;
   align-items: flex-end;
-  margin-top: 16%;
+  margin-top: -6%;
 }
 
 button {
-  margin: 5px;
-  font-size: 0.9rem;
-  padding: 5px;
-  border-radius: 10px;
   background-color: rgb(2, 43, 2);
+  border-radius: 10px;
   color: white;
+  font-size: 0.9rem;
+  margin: 5px;
+  padding: 5px;
 }
 
 #list-formato {
-  display: flex;
-  width: 80%;
   margin-left: 4.5rem;
+  width: 80%;
 }
 
 footer {
+  color: antiquewhite;
   display: flex;
   justify-content: center;
-  margin-top: 4%;
+  margin-top: 10%;
 }

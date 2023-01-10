@@ -119,6 +119,7 @@ class Form extends React.Component {
         const { inputTarefa, savedList } = this.state;
         return (
             <>
+                <div id="list-form">
                     <header>Minha Lista de Tarefas</header>
                     <p id="funcionamento">Clique duas vezes em um item para marcá-lo como completo</p>
                     <input id="texto-tarefa" value={inputTarefa} type="text" name="inputTarefa" onChange={this.handleChange} />
@@ -130,13 +131,14 @@ class Form extends React.Component {
                             </li>
                         ))}
                     </ol>
-                    <div id="buttons">
-                        <button type="button" id="mover-cima" onClick={this.moveParaCima}>subir</button>
-                        <button type="button" id="mover-baixo" onClick={this.moverParaBaixo}>descer</button>
-                        <button type="button" id="remover-selecionado" onClick={this.removeSelect}>Remover Item</button>
-                        <button type="button" id="apaga-tudo" onClick={this.removeList}>Remover Lista</button>
-                        <button type="button" id="remover-finalizados" onClick={this.removeFinalized}> Remover Finalizados</button>
-                    </div>
+                </div>
+                <div id="buttons">
+                    <button type="button" id="mover-cima" onClick={this.moveParaCima}>subir</button>
+                    <button type="button" id="mover-baixo" onClick={this.moverParaBaixo}>descer</button>
+                    <button type="button" id="remover-selecionado" onClick={this.removeSelect}>Remover Item</button>
+                    <button type="button" id="apaga-tudo" onClick={this.removeList}>Remover Lista</button>
+                    <button type="button" id="remover-finalizados" onClick={this.removeFinalized}> Remover Finalizados</button>
+                </div>
             </>
         );
     }
