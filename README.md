@@ -1,3 +1,7 @@
+<div align="center">
+  <img align="center" src = "todo-list.gif" />
+</div>
+
 # Objetivo
 
 O intuito deste projeto foi práticar os assuntos novos das sessões de Front-End do curso da Trybe, inicialmente este era um projeto da sessão de Fundamentos.
