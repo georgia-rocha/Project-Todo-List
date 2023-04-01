@@ -4,8 +4,8 @@
 
 # Objetivo
 
-O intuito deste projeto foi práticar os assuntos novos das sessões de Front-End do curso da Trybe, inicialmente este era um projeto da sessão de Fundamentos.
-Foi necessário desenvolver um form onde era adicionadas tarefas e os itens desta lista teriam que ser dinamicos de acordo com o intuito de quem está utilizado-a.
+O intuito deste projeto foi práticar os assuntos novos das sessões de Front-End do curso da Trybe, inicialmente este era um projeto bônus da sessão de Fundamentos.
+Foi necessário desenvolver um form onde seriam adicionadas tarefas e os itens desta lista teriam que ser dinâmicos de acordo com o intuito de quem está utilizado-a.
 
 # Requisitos Obrigatórios
 
